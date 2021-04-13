@@ -113,6 +113,10 @@ img {
     height: 50px;
 }
 
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
 
 
 
