@@ -1,15 +1,21 @@
-// Smooth Scrolling
-$('#navbar a, .btn').on('click', function (e) {
-    if (this.hash !== '') {
-        e.preventDefault();
+// Smooth Scrolling - option 2
+// $('#navbar a, .btn').on('click', function (e) {
+//     if (this.hash !== '') {
+//         e.preventDefault();
+//
+//         const hash = this.hash;
+//
+//         $('html, body').animate(
+//             {
+//                 scrollTop: $(hash).offset().top - 100,
+//             },
+//             800
+//         );
+//     }
+// });
 
-        const hash = this.hash;
+//  Option 3
 
-        $('html, body').animate(
-            {
-                scrollTop: $(hash).offset().top - 100,
-            },
-            800
-        );
-    }
+const scroll = new SmoothScroll('.navbar a[href*="#"]', {
+    speed: 800
 });
